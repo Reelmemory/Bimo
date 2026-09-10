@@ -1,0 +1,33 @@
+{
+  "name": "bimo-agent-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BIMO autonomous technical operations agent runtime",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "vite --config vite.config.ts",
+    "dev:api": "tsx scripts/interface-server.ts",
+    "build:web": "vite build --config vite.config.ts",
+    "preview": "vite preview --config vite.config.ts",
+    "demo:deployment": "tsx scripts/deployment-demo.ts",
+    "demo:ai-deployment": "tsx scripts/ai-deployment-demo.ts",
+    "demo:vercel": "tsx scripts/vercel-operations-demo.ts",
+    "demo:web3": "tsx scripts/web3-operations-demo.ts",
+    "demo:network": "tsx scripts/network-operations-demo.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.23.13",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "@anakin-io/sdk": "^0.1.0",
+    "@vercel/sdk": "^1.28.28",
+    "openai": "^6.49.0"
+  }
+}
